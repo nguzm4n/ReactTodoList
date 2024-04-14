@@ -1,0 +1,43 @@
+/* Se asigna una altura minima porque la tarea puede tener un
+texto muy largo y vamos a tener que exteneder la altura, para
+que no se salga el texto .
+Se usa space-between para que los elementos se distribuyan adecuadamente
+*/
+.tarea-contenedor {
+    width: 500px;
+    min-height: 65px;
+    background-color: #1b1b32;
+    margin: 5px 0;
+    padding: 8px 15px 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+/* Estilo contenido */
+/* overflow-wrap anywhere : si el texto de la tarea es muy largo, va a ser cortado
+y va a seguir hacia abajo */
+.tarea-texto {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    overflow-wrap: anywhere;
+}
+
+.tarea-icono {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+/* Tarea completada */
+
+.tarea-contenedor.completada {
+    background-color: #5a01a7;
+    text-decoration: line-through;
+}
