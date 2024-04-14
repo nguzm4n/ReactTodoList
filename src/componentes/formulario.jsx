@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import '../styles/tarea-formulario.css'
 import { v4 as uuidv4 } from 'uuid'
 
-const TareaFormulario = (props) => {
+const TareaFormulario = ({ onSubmit }) => {
 
 const [input, setInput] = useState('')
 
@@ -23,7 +23,7 @@ const manejarCambio = e => {
       texto: input,
       completada: false
     }
-    props.onSubmit(tareaNueva)
+    onSubmit(tareaNueva)
   }
 
 

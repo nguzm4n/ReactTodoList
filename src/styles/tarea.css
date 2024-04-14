@@ -17,6 +17,18 @@ Se usa space-between para que los elementos se distribuyan adecuadamente
     cursor: pointer;
 }
 
+/* Colores */
+
+.tarea-contenedor:nth-child(3n + 1) {
+    background-color: #1b1b32;
+}
+.tarea-contenedor:nth-child(3n + 2) {
+    background-color: #2a2a40;
+}
+.tarea-contenedor:nth-child(3n + 3) {
+    background-color: #3b3b4f;
+}
+
 /* Estilo contenido */
 /* overflow-wrap anywhere : si el texto de la tarea es muy largo, va a ser cortado
 y va a seguir hacia abajo */
