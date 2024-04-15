@@ -11,17 +11,17 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 // el id de la tarea.
 //  -Una función para eliminar una Tarea, donde se aplica la misma logica anterior
 
-const Tarea = ({ id, texto, completada, completarTarea, eliminarTarea}) => {
+const Tarea = ({ id, texto, completada, completarTarea, eliminarTarea }) => {
   return (
     <div className={completada ? 'tarea-contenedor completada' : 'tarea-contenedor'}>
       <div className='tarea-texto'
-      onClick={() => completarTarea(id)}>
+        onClick={() => completarTarea(id)}>
         {texto}
       </div>
       <div className='tarea-contenedor-iconos'>
-        <AiOutlineCloseCircle 
-        className='tarea-icono' 
-        onClick={() => eliminarTarea(id)}/>
+        <AiOutlineCloseCircle
+          className='tarea-icono'
+          onClick={() => eliminarTarea(id)} />
       </div>
     </div>
   )

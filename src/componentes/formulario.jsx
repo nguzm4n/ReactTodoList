@@ -4,20 +4,20 @@ import { v4 as uuidv4 } from 'uuid'
 
 const TareaFormulario = ({ onSubmit }) => {
 
-const [input, setInput] = useState('')
+  const [input, setInput] = useState('')
 
 
-const manejarCambio = e => {
-  const nuevoValor = e.target.value
-  setInput(nuevoValor);
-}
+  const manejarCambio = e => {
+    const nuevoValor = e.target.value
+    setInput(nuevoValor);
+  }
 
   // Agregar Tareas
 
   const manejarEnvio = e => {
     e.preventDefault();
 
-    
+
     const tareaNueva = {
       id: uuidv4(),
       texto: input,
@@ -29,18 +29,18 @@ const manejarCambio = e => {
 
   return (
     <form className='tarea-formulario'
-    onSubmit={manejarEnvio}>
-        <input
+      onSubmit={manejarEnvio}>
+      <input
         className='tarea-input'
         type='text'
         placeholder='Escribe una Tarea'
         name='texto'
         onChange={manejarCambio}
-        />
-        <button 
+      />
+      <button
         className='tarea-boton'>
-            Agregar Tarea
-        </button>
+        Agregar Tarea
+      </button>
     </form>
   )
 }
